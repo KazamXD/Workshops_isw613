@@ -17,8 +17,14 @@ VALUES
 INSERT INTO Users (user, password)
 VALUES 
 (
-	("Kazam",
-	"56789"),
-	("Trazyn",)
+	"Kazam",
+	"56789"
+), 
+(
+	"John",
+	"98765"
+),
+(
+	"Trazyn",
 	"Trazyn"
 );

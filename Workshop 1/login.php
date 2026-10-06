@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$servername = "localhost";
+$servername = "workshop1.local";
 $username = "root";
 $password = "";
 $dbname = "Workshop1";
