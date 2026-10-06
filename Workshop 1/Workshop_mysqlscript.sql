@@ -5,11 +5,20 @@ CREATE table Users
 	password varchar (50)
 );
 
-SELECT user`user`, password  from Users;
+SELECT user, password  from Users;
 
 INSERT INTO Users (user, password)
 VALUES 
 (
 	"Kevin",
 	"12345"
+);
+
+INSERT INTO Users (user, password)
+VALUES 
+(
+	("Kazam",
+	"56789"),
+	("Trazyn",)
+	"Trazyn"
 );
