@@ -36,3 +36,5 @@ INSERT into Users (user, password, provinceID) values
 SELECT * from Users;
 
 select * from Province;
+
+DELETE from Users where id=7;

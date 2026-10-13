@@ -1,6 +1,7 @@
 <?php
 session_start();
 $error = $_GET["error"] ?? "";
+$registered = isset($_GET["registered"]);
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +24,11 @@ $error = $_GET["error"] ?? "";
     <p class="text-center">
         Ingrese sus credenciales para acceder al sistema.
     </p>
+    <?php if ($registered): ?>
+        <div class="alert alert-success text-center">
+            Cuenta creada correctamente. Ya puede iniciar sesión.
+        </div>
+    <?php endif; ?>
     <?php if (!empty($error)): ?>
 
         <div class="alert alert-danger text-center">
@@ -48,10 +54,9 @@ $error = $_GET["error"] ?? "";
                             <input type="password" class="form-control" id="password" name="password" required>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block"> Ingresar</button>
-
                         <div class="text-center mt-3">
                             <p>¿No tienes una cuenta?</p>
-                            <a href="register.php" class="btn btn-success btn-block"> Registrarse</a>
+                            <a href="actions/register.php" class="btn btn-success btn-block"> Registrarse</a>
                         </div>
                     </form>
                 </div>
