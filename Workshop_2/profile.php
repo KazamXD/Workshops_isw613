@@ -4,7 +4,7 @@ require_once __DIR__ . "/connection.php";
 
 // Verify that the user is logged in
 if (!isset($_SESSION["user_id"])) {
-    header("Location: /index.php");
+    header("Location: index.php");
     exit;
 }
 
@@ -56,7 +56,7 @@ $user = $stmt->fetch();
 
 if (!$user) {
     session_destroy();
-    header("Location: /index.php");
+    header("Location: index.php");
     exit;
 }
 
@@ -111,6 +111,8 @@ $provincias = $stmt->fetchAll();
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Guardar cambios</button>
                         <a href="index.php" class="btn btn-secondary btn-block">Volver</a>
+
+                        <a href="logout.php" class="btn btn-danger"> Cerrar sesión</a>
                     </form>
                 </div>
             </div>
