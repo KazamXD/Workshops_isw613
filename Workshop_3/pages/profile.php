@@ -38,7 +38,7 @@ $provinces = getProvinces($conn);
             </dl>
             <hr>
             <h5>Update your data</h5>
-            <form action="/actions/update_profile.php" method="POST" enctype="multipart/form-data">
+            <form action="../actions/update_profile.php" method="POST" enctype="multipart/form-data">
               <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" class="form-control" id="username" name="username" maxlength="50" value="<?php echo htmlspecialchars($_SESSION['username'], ENT_QUOTES, 'UTF-8'); ?>" required>

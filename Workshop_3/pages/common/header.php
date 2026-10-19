@@ -27,7 +27,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="profile.php">Mi Perfil</a>
+              <a class="nav-link" href="./profile.php">Mi Perfil</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="courses.php">Cursos</a>
