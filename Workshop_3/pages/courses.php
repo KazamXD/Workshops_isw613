@@ -34,7 +34,7 @@ requireLogin();
                         <th>Nombre</th>
                         <th>Carrera</th>
                         <th>Créditos</th>
-                        <th>Acciones</th> <!-- NUEVA COLUMNA -->
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,7 +48,7 @@ requireLogin();
                                 <!-- Botón Editar (manda el ID por la URL) -->
                                 <a href="course_edit.php?id=<?= $course['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
                                 
-                                <!-- Botón Eliminar (usa un formulario POST por seguridad) -->
+                                <!-- Botón Eliminar (usa POST por seguridad) -->
                                 <form action="../actions/course_delete.php" method="POST" class="d-inline" onsubmit="return confirm('¿Seguro que deseas eliminar este curso?');">
                                     <input type="hidden" name="id" value="<?= $course['id'] ?>">
                                     <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>

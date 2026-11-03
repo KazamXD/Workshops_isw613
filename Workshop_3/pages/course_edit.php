@@ -4,12 +4,16 @@ require_once __DIR__ . '/../utils/database.php';
 requireLogin();
 
 $course = [
-    'id' => '', 'name' => '', 'course_code' => '', 
-    'career_id' => '', 'credits' => '', 'description' => ''
+    'id' => '', 
+    'name' => '', 
+    'course_code' => '', 
+    'career_id' => '', 
+    'credits' => '', 
+    'description' => ''
 ];
 $isEdit = false;
 
-// Si viene un ID por la URL, es porque vamos a editar
+// If an ID comes from the URL, we are editing an existing course
 if (isset($_GET['id'])) {
     $isEdit = true;
     $stmt = $conn->prepare('SELECT * FROM Courses WHERE id = :id');
@@ -32,10 +36,10 @@ if (isset($_GET['id'])) {
 
     <div class="card">
         <div class="card-body">
-            <!-- Enviamos los datos a actions/course_save.php -->
+            <!-- Send the data to actions/course_save.php -->
             <form action="../actions/course_save.php" method="POST">
                 
-                <!-- ID oculto (solo sirve si estamos editando) -->
+                <!-- Hidden ID field (only used when editing) -->
                 <input type="hidden" name="id" value="<?= htmlspecialchars($course['id']) ?>">
 
                 <div class="form-group">
